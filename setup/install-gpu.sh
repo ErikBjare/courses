@@ -1,4 +1,4 @@
-# This script is designed to work with ubuntu 16.04 LTS
+# This script is designed to work with ubuntu 18.04 LTS
 
 # ensure system is updated and has basic build tools
 sudo apt-get update
@@ -7,9 +7,9 @@ sudo apt-get --assume-yes install tmux build-essential gcc g++ make binutils
 sudo apt-get --assume-yes install software-properties-common
 
 # download and install GPU drivers
-wget "http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb" -O "cuda-repo-ubuntu1604_8.0.44-1_amd64.deb"
+wget "http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb" -O "cuda-repo-ubuntu1804_10.0.130-1_amd64.deb"
 
-sudo dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 sudo apt-get update
 sudo apt-get -y install cuda
 sudo modprobe nvidia
